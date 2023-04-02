@@ -13,7 +13,6 @@ public class RegistrationFormTests extends TestBase {
         $("#firstName").setValue("Ilya");
         $("#lastName").setValue("Tyunin");
         $("#userEmail").setValue("my@bb.org");
-        $("#userEmail").setValue("my@bb.org");
         $("#gender-radio-1").click();
     }
 }
