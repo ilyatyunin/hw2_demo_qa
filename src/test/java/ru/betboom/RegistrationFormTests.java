@@ -15,7 +15,7 @@ public class RegistrationFormTests extends TestBase {
         String firstName = "Ilya";
         String lastName = "Tyunin";
         String userEmail = "is_tyunin@gmail.com";
-        String genter = "Male";
+        String gender = "Male";
         String userNumber = "9876543210";
         String year = "1996";
         String month = "November";
@@ -38,7 +38,7 @@ public class RegistrationFormTests extends TestBase {
         $("#firstName").setValue(firstName);
         $("#lastName").setValue(lastName);
         $("#userEmail").setValue(userEmail);
-        $("#genterWrapper").$(byText(genter)).click();
+        $("#genterWrapper").$(byText(gender)).click();
         $("#userNumber").setValue(userNumber);
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption(month);
@@ -61,7 +61,7 @@ public class RegistrationFormTests extends TestBase {
                 text(firstName),
                 text(lastName),
                 text(userEmail),
-                text(genter),
+                text(gender),
                 text(userNumber),
                 text(dayOfMonth),
                 text(month),
