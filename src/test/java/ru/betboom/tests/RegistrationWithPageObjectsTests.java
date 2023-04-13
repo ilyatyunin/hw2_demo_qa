@@ -27,8 +27,6 @@ public class RegistrationWithPageObjectsTests extends TestBase {
     String state = "Haryana";
     String city = "Karnal";
 
-    RegistrationPage registrationPage = new RegistrationPage();
-
 
     @Test
     void fillFormTest() {
@@ -48,16 +46,17 @@ public class RegistrationWithPageObjectsTests extends TestBase {
                 .setLastName(lastName)
                 .setUserEmail(userEmail)
                 .setGender(gender)
-                .setNumber(userNumber);
+                .setNumber(userNumber)
+                .setBirthDate(dayOfMonth, month, year);
 
 //        $("#lastName").setValue(lastName);
 //        $("#userEmail").setValue(userEmail);
 //        $("#genterWrapper").$(byText(gender)).click();
 //        $("#userNumber").setValue(userNumber);
-        $("#dateOfBirthInput").click();
-        $(".react-datepicker__month-select").selectOption(month);
-        $(".react-datepicker__year-select").selectOption(year);
-        $(".react-datepicker__day--0" + dayOfMonth).click();
+//        $("#dateOfBirthInput").click();
+//        $(".react-datepicker__month-select").selectOption(month);
+//        $(".react-datepicker__year-select").selectOption(year);
+//        $(".react-datepicker__day--0" + dayOfMonth).click();
         $("#subjectsInput").setValue(subjects).pressEnter();
         $("#hobbiesWrapper").$(byText(hobbies)).click();
         $("#uploadPicture").uploadFile(new File(dir + file));
