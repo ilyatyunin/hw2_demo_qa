@@ -19,7 +19,6 @@ public class RegistrationPage {
 
 
     // Actions
-    // Open website
 
     public RegistrationPage openPage() {
         open("/automation-practice-form");

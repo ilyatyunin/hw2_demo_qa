@@ -35,13 +35,13 @@ public class RegistrationWithPageObjectsTests extends TestBase {
 
 
         // Open website
-        open("/automation-practice-form");
-        executeJavaScript("$('footer').remove()");
-        executeJavaScript("$('#fixedban').remove()");
+//        open("/automation-practice-form");
+//        executeJavaScript("$('footer').remove()");
+//        executeJavaScript("$('#fixedban').remove()");
 
 
         // Fill registration form
-        // $("#firstName").setValue(firstName);
+//        $("#firstName").setValue(firstName);
         registrationPage
                 .openPage()
                 .setFirstName(firstName)
@@ -50,10 +50,10 @@ public class RegistrationWithPageObjectsTests extends TestBase {
                 .setGender(gender)
                 .setNumber(userNumber);
 
-        // $("#lastName").setValue(lastName);
-        // $("#userEmail").setValue(userEmail);
-        // $("#genterWrapper").$(byText(gender)).click();
-        // $("#userNumber").setValue(userNumber);
+//        $("#lastName").setValue(lastName);
+//        $("#userEmail").setValue(userEmail);
+//        $("#genterWrapper").$(byText(gender)).click();
+//        $("#userNumber").setValue(userNumber);
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption(month);
         $(".react-datepicker__year-select").selectOption(year);
