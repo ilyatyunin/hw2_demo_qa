@@ -1,6 +1,7 @@
-package ru.betboom;
+package ru.betboom.tests;
 
 import org.junit.jupiter.api.Test;
+import ru.betboom.pages.RegistrationPage;
 
 import java.io.File;
 
@@ -8,25 +9,30 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class RegistrationFormTests extends TestBase {
+public class RegistrationWithPageObjectsTests extends TestBase {
+    // Input variables
+    String firstName = "Ilya";
+    String lastName = "Tyunin";
+    String userEmail = "is_tyunin@gmail.com";
+    String gender = "Male";
+    String userNumber = "9876543210";
+    String year = "1996";
+    String month = "November";
+    String dayOfMonth = "26";
+    String subjects = "Maths";
+    String hobbies = "Sports";
+    String dir = "src/test/resources/";
+    String file = "PalmTrees.jpg";
+    String currentAddress = "Moscow";
+    String state = "Haryana";
+    String city = "Karnal";
+
+    RegistrationPage registrationPage = new RegistrationPage();
+
+
     @Test
     void fillFormTest() {
-        // Input variables
-        String firstName = "Ilya";
-        String lastName = "Tyunin";
-        String userEmail = "is_tyunin@gmail.com";
-        String gender = "Male";
-        String userNumber = "9876543210";
-        String year = "1996";
-        String month = "November";
-        String dayOfMonth = "26";
-        String subjects = "Maths";
-        String hobbies = "Sports";
-        String dir = "src/test/resources/";
-        String file = "PalmTrees.jpg";
-        String currentAddress = "Moscow";
-        String state = "Haryana";
-        String city = "Karnal";
+
 
         // Open website
         open("/automation-practice-form");
@@ -35,11 +41,19 @@ public class RegistrationFormTests extends TestBase {
 
 
         // Fill registration form
-        $("#firstName").setValue(firstName);
-        $("#lastName").setValue(lastName);
-        $("#userEmail").setValue(userEmail);
-        $("#genterWrapper").$(byText(gender)).click();
-        $("#userNumber").setValue(userNumber);
+        // $("#firstName").setValue(firstName);
+        registrationPage
+                .openPage()
+                .setFirstName(firstName)
+                .setLastName(lastName)
+                .setUserEmail(userEmail)
+                .setGender(gender)
+                .setNumber(userNumber);
+
+        // $("#lastName").setValue(lastName);
+        // $("#userEmail").setValue(userEmail);
+        // $("#genterWrapper").$(byText(gender)).click();
+        // $("#userNumber").setValue(userNumber);
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption(month);
         $(".react-datepicker__year-select").selectOption(year);
