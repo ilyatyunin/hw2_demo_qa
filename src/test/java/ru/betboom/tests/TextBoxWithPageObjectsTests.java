@@ -11,16 +11,16 @@ public class TextBoxWithPageObjectsTests extends TestBase {
                 userEmail = "is_tyunin@gmail.com",
                 currentAddress = "Bali",
                 permanentAddress = "Moscow";
-//        Open website
-        textBoxPage.
-                openPage()
-
+//        Fill registration form
+        textBoxPage
+                .openPage()
                 .setFullName(fullName)
                 .setUserEmail(userEmail)
                 .setCurrentAddress(currentAddress)
                 .setPermanentAddress(permanentAddress)
-                .submitData()
-
+                .submitData();
+//        Check registration form
+        textBoxPage
                 .verifyData("Name", fullName)
                 .verifyData("Email", userEmail)
                 .verifyData("Current Address", currentAddress)
