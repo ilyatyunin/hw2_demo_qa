@@ -9,7 +9,6 @@ import java.io.File;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-import static java.lang.String.format;
 
 public class RegistrationPage {
 //    Components
@@ -37,8 +36,10 @@ public class RegistrationPage {
 //    Actions
     public RegistrationPage openPage() {
         open("/automation-practice-form");
-
         formHeaderText.shouldHave(text("Student Registration Form"));
+        return this;
+    }
+    public RegistrationPage removeAds() {
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");
         return this;

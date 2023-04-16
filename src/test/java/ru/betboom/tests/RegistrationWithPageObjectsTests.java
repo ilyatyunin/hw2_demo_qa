@@ -3,14 +3,9 @@ package ru.betboom.tests;
 import org.junit.jupiter.api.Test;
 import ru.betboom.pages.RegistrationPage;
 
-import java.io.File;
-
-import static com.codeborne.selenide.Condition.appear;
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
-
 public class RegistrationWithPageObjectsTests extends TestBase {
+//    Components
+    RegistrationPage registrationPage = new RegistrationPage();
 //    Input variables
     String
         firstName = "Ilya",
@@ -29,12 +24,12 @@ public class RegistrationWithPageObjectsTests extends TestBase {
         state = "Haryana",
         city = "Karnal";
 
-
     @Test
     void fillFormTest() {
 //        Fill registration form
         registrationPage
                 .openPage()
+                .removeAds()
                 .setFirstName(firstName)
                 .setLastName(lastName)
                 .setUserEmail(userEmail)

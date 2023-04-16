@@ -1,16 +1,20 @@
 package ru.betboom.tests;
 
 import org.junit.jupiter.api.Test;
+import ru.betboom.pages.TextBoxPage;
 
 public class TextBoxWithPageObjectsTests extends TestBase {
+//    Components
+    TextBoxPage textBoxPage = new TextBoxPage();
+//    Input variables
+    String
+            fullName = "Ilya Tyunin",
+            userEmail = "is_tyunin@gmail.com",
+            currentAddress = "Bali",
+            permanentAddress = "Moscow";
+
     @Test
     void fillFormTest() {
-//        Input variables
-        String
-                fullName = "Ilya Tyunin",
-                userEmail = "is_tyunin@gmail.com",
-                currentAddress = "Bali",
-                permanentAddress = "Moscow";
 //        Fill registration form
         textBoxPage
                 .openPage()

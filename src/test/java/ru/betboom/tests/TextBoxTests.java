@@ -1,6 +1,5 @@
 package ru.betboom.tests;
 
-import com.codeborne.selenide.Selenide;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -9,14 +8,15 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class TextBoxTests extends TestBase {
+//    Input variables
+    String
+            fullName = "Ilya Tyunin",
+            userEmail = "is_tyunin@gmail.com",
+            currentAddress = "Bali",
+            permanentAddress = "Moscow";
+
     @Test
     void fillFormTest() {
-//        Input variables
-        String
-                fullName = "Ilya Tyunin",
-                userEmail = "is_tyunin@gmail.com",
-                currentAddress = "Bali",
-                permanentAddress = "Moscow";
 //        Open website
         open("/text-box");
 //        Fill registration form
