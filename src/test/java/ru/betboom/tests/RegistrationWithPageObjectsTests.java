@@ -12,21 +12,22 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class RegistrationWithPageObjectsTests extends TestBase {
 //    Input variables
-    String firstName = "Ilya";
-    String lastName = "Tyunin";
-    String userEmail = "is_tyunin@gmail.com";
-    String gender = "Male";
-    String userNumber = "9876543210";
-    String year = "1996";
-    String month = "November";
-    String dayOfMonth = "26";
-    String subjects = "Maths";
-    String hobbies = "Sports";
-    String dir = "src/test/resources/";
-    String file = "PalmTrees.jpg";
-    String currentAddress = "Moscow";
-    String state = "Haryana";
-    String city = "Karnal";
+    String
+        firstName = "Ilya",
+        lastName = "Tyunin",
+        userEmail = "is_tyunin@gmail.com",
+        gender = "Male",
+        userNumber = "9876543210",
+        year = "1996",
+        month = "November",
+        dayOfMonth = "26",
+        subjects = "Maths",
+        hobbies = "Sports",
+        dir = "src/test/resources/",
+        file = "PalmTrees.jpg",
+        currentAddress = "Bali",
+        state = "Haryana",
+        city = "Karnal";
 
 
     @Test

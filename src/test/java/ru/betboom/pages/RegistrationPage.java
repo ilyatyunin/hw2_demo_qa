@@ -17,7 +17,7 @@ public class RegistrationPage {
     ResultsModal resultsModal = new ResultsModal();
 
 //    Locators
-    SelenideElement // можно поставить public, но нам не нужны эти элементы в других классах
+    SelenideElement
             formHeaderText = $(".practice-form-wrapper"),
             firstNameInput = $("#firstName"),
             lastNameInput = $("#lastName"),
