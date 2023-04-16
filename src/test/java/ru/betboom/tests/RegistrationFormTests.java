@@ -24,7 +24,7 @@ public class RegistrationFormTests extends TestBase {
         String hobbies = "Sports";
         String dir = "src/test/resources/";
         String file = "PalmTrees.jpg";
-        String currentAddress = "Moscow";
+        String currentAddress = "Bali";
         String state = "Haryana";
         String city = "Karnal";
 
