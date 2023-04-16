@@ -9,7 +9,6 @@ public class TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
 
-
     @BeforeAll
     static void firstConfigure() {
         Configuration.baseUrl = "https://demoqa.com";
