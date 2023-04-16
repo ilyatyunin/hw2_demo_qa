@@ -12,10 +12,11 @@ import static com.codeborne.selenide.Selenide.*;
 import static java.lang.String.format;
 
 public class RegistrationPage {
-    // SelenideElements / locator /etc
-
+//    Components
     CalendarComponent calendarComponent = new CalendarComponent();
     ResultsModal resultsModal = new ResultsModal();
+
+//    Locators
     SelenideElement // можно поставить public, но нам не нужны эти элементы в других классах
             formHeaderText = $(".practice-form-wrapper"),
             firstNameInput = $("#firstName"),
@@ -33,11 +34,7 @@ public class RegistrationPage {
             cityInput = $("#city"),
             submitButton = $("#submit");
 
-//    ElementsCollection genderInputs = $$(""); // список элементов (коллекция)
-
-
-    // Actions
-
+//    Actions
     public RegistrationPage openPage() {
         open("/automation-practice-form");
 
@@ -46,12 +43,10 @@ public class RegistrationPage {
         executeJavaScript("$('#fixedban').remove()");
         return this;
     }
-
     public RegistrationPage setFirstName(String value) {
         firstNameInput.setValue(value);
         return this;
     }
-
     public RegistrationPage setLastName(String value) {
         lastNameInput.setValue(value);
         return this;
@@ -107,7 +102,6 @@ public class RegistrationPage {
         resultsModal.verifyModalAppears();
         return this;
     }
-
     public RegistrationPage verifyResult(String key, String value) {
         resultsModal.verifyResult(key, value);
         return this;
