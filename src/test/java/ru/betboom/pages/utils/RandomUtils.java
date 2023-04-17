@@ -25,21 +25,18 @@ public class RandomUtils {
         return faker.name().lastName();
     }
     public static String getRandomEmail() {
-
         return new Faker(new Locale("en")).internet().emailAddress();
     }
     public static String getRandomCurrentAddress() {
         return faker.address().fullAddress();
     }
     public static int getRandomInt(int min, int max) {
-
         return ThreadLocalRandom.current().nextInt(min, max);
     }
     public static String getRandomItemFromArray(String[] values) {
         int index = getRandomInt(0, values.length - 1);
         return values[index];
     }
-
     public static String getRandomGender() {
         return getRandomItemFromArray(genders);
     }
