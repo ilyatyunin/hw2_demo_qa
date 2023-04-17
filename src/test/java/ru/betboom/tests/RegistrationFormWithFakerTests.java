@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 import static ru.betboom.tests.TestData.*;
 
-public class RegistrationFormWithTestDataTests extends TestBase {
+public class RegistrationFormWithFakerTests extends TestBase {
 
     @Test
     void fillFormTest() {

@@ -1,48 +1,90 @@
 package ru.betboom.pages.utils;
 
-import java.security.SecureRandom;
-import java.util.UUID;
+import com.github.javafaker.Faker;
+
+import java.util.Locale;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class RandomUtils {
-    static String[] genders = {"Male", "Female", "Others"};
-    public static void main(String[] args) {
-        System.out.println(getRandomUuidString());
-        System.out.println(getRandomString(10));
-        System.out.println(getRandomEmail(4));
-        System.out.println(getRandomInt(111111, 999999));
+    static Faker faker = new Faker(new Locale("ru"));
+    static String[]
+            genders = {"Male", "Female", "Others"},
+            subjects = {"Hindi", "English", "Maths", "Physics", "Chemistry", "Biology", "Computer Science", "Commerce", "Accounting", "Economics", "Arts", "Social Studies", "History", "Civics"},
+            hobbies = {"Sports", "Reading", "Music"},
+            states = {"NCR", "Uttar Pradesh", "Haryana", "Rajasthan"},
+            cityNCR = {"Delhi", "Gurgaon", "Noida"},
+            cityUttarPradesh = {"Agra", "Lucknow", "Merrut"},
+            cityHaryana = {"Karnal", "Panipat"},
+            cityRajasthan = {"Jaipur", "Jaiselmer"},
+            months = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
 
-
-        System.out.println(getRandomItemFromArray(genders));
+    public static String getRandomFirstName() {
+        return faker.name().firstName();
     }
-
-    public static String getRandomUuidString() {
-        String uuid = UUID.randomUUID().toString();
-        return "uuid = " + uuid;
+    public static String getRandomLastName() {
+        return faker.name().lastName();
     }
+    public static String getRandomEmail() {
 
-    public static String getRandomString(int len) {
-//        String AB = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-        String AB = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-        SecureRandom rnd = new SecureRandom();
-        StringBuilder sb = new StringBuilder(len);
-        for(int i = 0; i < len; i++)
-            sb.append(AB.charAt(rnd.nextInt(AB.length())));
-        return sb.toString();
+        return new Faker(new Locale("en")).internet().emailAddress();
     }
-    public static String getRandomEmail(int len) {
-        return getRandomString(len) + "@qa.com";
+    public static String getRandomCurrentAddress() {
+        return faker.address().fullAddress();
     }
     public static int getRandomInt(int min, int max) {
+
         return ThreadLocalRandom.current().nextInt(min, max);
     }
-
     public static String getRandomItemFromArray(String[] values) {
         int index = getRandomInt(0, values.length - 1);
         return values[index];
     }
+
     public static String getRandomGender() {
         return getRandomItemFromArray(genders);
+    }
+    public static String getRandomNumber() {
+        return "9" + getRandomInt(100000000, 999999999);
+    }
+    public static String getRandomYear() {
+        return Integer.toString(getRandomInt(1900, 2010));
+    }
+    public static String getRandomDay() {
+        int day = getRandomInt(1, 28);
+        if (day < 10) {
+            return "0" + day;
+        } else {
+            return Integer.toString(day);
+        }
+    }
+    public static String getRandomMonth() {
+        return getRandomItemFromArray(months);
+    }
+    public static String getRandomSubject() {
+        return getRandomItemFromArray(subjects);
+    }
+    public static String getRandomHobby() {
+        return getRandomItemFromArray(hobbies);
+    }
+    public static String getRandomState() {
+        return getRandomItemFromArray(states);
+    }
+    public static String getRandomCity(String state) {
+        switch (state) {
+            case "NCR": {
+                return getRandomItemFromArray(cityNCR);
+            }
+            case "Uttar Pradesh": {
+                return getRandomItemFromArray(cityUttarPradesh);
+            }
+            case "Haryana": {
+                return getRandomItemFromArray(cityHaryana);
+            }
+            case "Rajasthan": {
+                return getRandomItemFromArray(cityRajasthan);
+            }
+        }
+        return null;
     }
 
 
