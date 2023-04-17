@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeAll;
 import ru.betboom.pages.RegistrationPage;
 import ru.betboom.pages.TextBoxPage;
 
-public class TestBase {
+public class TestBase extends TestData {
     @BeforeAll
     static void firstConfigure() {
         Configuration.baseUrl = "https://demoqa.com";
