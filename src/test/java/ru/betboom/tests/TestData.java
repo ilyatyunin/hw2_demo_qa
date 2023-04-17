@@ -1,6 +1,6 @@
 package ru.betboom.tests;
 
-import static ru.betboom.pages.utils.RandomUtils.*;
+import static ru.betboom.utils.RandomUtils.*;
 
 public class TestData {
 

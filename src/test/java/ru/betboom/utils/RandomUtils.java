@@ -1,4 +1,4 @@
-package ru.betboom.pages.utils;
+package ru.betboom.utils;
 
 import com.github.javafaker.Faker;
 
