@@ -12,7 +12,7 @@ public class TestData {
             userNumber = getRandomNumber(),
             year = getRandomYear(),
             month = getRandomMonth(),
-            dayOfMonth = getRandomDay(),
+            dayOfMonth = getRandomDay(year, month),
             subjects = getRandomSubject(),
             hobbies = getRandomHobby(),
             dir = "src/test/resources/",

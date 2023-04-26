@@ -2,9 +2,7 @@ package ru.betboom.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import ru.betboom.pages.components.CalendarComponent;
-import ru.betboom.pages.components.ResultsModal;
-
-import java.io.File;
+import ru.betboom.pages.components.ResultsModalComponent;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -13,7 +11,7 @@ import static com.codeborne.selenide.Selenide.*;
 public class RegistrationPage {
 //    Components
     CalendarComponent calendarComponent = new CalendarComponent();
-    ResultsModal resultsModal = new ResultsModal();
+    ResultsModalComponent resultsModalComponent = new ResultsModalComponent();
 
 //    Locators
     SelenideElement
@@ -56,7 +54,7 @@ public class RegistrationPage {
         userEmailInput.setValue(value);
         return this;
     }
-    public RegistrationPage setGender(String value) {
+    public RegistrationPage chooseGender(String value) {
         gender.$(byText(value)).click();
         return this;
     }
@@ -73,12 +71,12 @@ public class RegistrationPage {
         subjectsInput.setValue(value).pressEnter();
         return this;
     }
-    public RegistrationPage setHobbies(String value) {
+    public RegistrationPage chooseHobbies(String value) {
         hobbiesInput.$(byText(value)).click();
         return this;
     }
     public RegistrationPage setPicture(String fileName) {
-        uploadPicture.uploadFile(new File(fileName));
+        uploadPicture.uploadFromClasspath(fileName);
         return this;
     }
     public RegistrationPage setCurrentAddress(String value) {
@@ -100,15 +98,15 @@ public class RegistrationPage {
         return this;
     }
     public RegistrationPage verifyRegistrationModalAppears() {
-        resultsModal.verifyModalAppears();
+        resultsModalComponent.verifyModalAppears();
         return this;
     }
     public RegistrationPage verifyResult(String key, String value) {
-        resultsModal.verifyResult(key, value);
+        resultsModalComponent.verifyResult(key, value);
         return this;
     }
     public RegistrationPage closeRegistrationModal() {
-        resultsModal.closeModal();
+        resultsModalComponent.closeModal();
         return this;
     }
 }

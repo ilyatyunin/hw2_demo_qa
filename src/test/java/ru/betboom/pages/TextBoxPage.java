@@ -1,14 +1,14 @@
 package ru.betboom.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import ru.betboom.pages.components.OutputData;
+import ru.betboom.pages.components.OutputDataComponent;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class TextBoxPage {
 //    Components
-    OutputData outputData = new OutputData();
+    OutputDataComponent outputDataComponent = new OutputDataComponent();
 //    Locators
     SelenideElement
             fullNameInput = $("#userName"),
@@ -43,7 +43,7 @@ public class TextBoxPage {
         return this;
     }
     public TextBoxPage verifyData(String key, String value) {
-        outputData.verifyOutputData(key, value);
+        outputDataComponent.verifyOutputData(key, value);
         return this;
     }
 }
