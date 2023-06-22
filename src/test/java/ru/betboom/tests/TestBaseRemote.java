@@ -37,5 +37,7 @@ public class TestBaseRemote {
         Attach.screenshotAs("Last Screeshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
+        Attach.addVideo();
+        Attach.getVideoUrl();
     }
 }
