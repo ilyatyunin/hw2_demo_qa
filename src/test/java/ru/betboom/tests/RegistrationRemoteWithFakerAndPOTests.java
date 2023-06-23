@@ -13,7 +13,7 @@ public class RegistrationRemoteWithFakerAndPOTests extends TestBaseRemote {
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
-    @Tag("remote")
+//    @Tag("remote")
     @Tag("property")
     @DisplayName("Successful registration")
     void fillFormTest() {
