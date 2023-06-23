@@ -1,3 +1,4 @@
+// Final version with add TestData, TestBase, Page Object, Components, Faker, Remote (Jenkins + Selenoid), Attachments and Properties
 package ru.betboom.tests;
 
 import org.junit.jupiter.api.DisplayName;
