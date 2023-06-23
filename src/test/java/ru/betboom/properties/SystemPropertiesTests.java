@@ -30,7 +30,7 @@ public class SystemPropertiesTests {
     }
 
     @Test
-    @Tag("property")
+//    @Tag("property")
     void systemProperties4Tests() {
 
         String browser = System.getProperty("browser", "firefox"); // забрать значение (если нет, то дефолтный) - рекомендуется к использованию
@@ -39,7 +39,7 @@ public class SystemPropertiesTests {
     }
 
     @Test
-    @Tag("hello")
+//    @Tag("hello")
     void systemProperties5Tests() {
 
         String name = System.getProperty("name", "default_student"); // забрать значение (если нет, то дефолтный) - рекомендуется к использованию

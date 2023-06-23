@@ -14,6 +14,7 @@ public class RegistrationRemoteWithFakerAndPOTests extends TestBaseRemote {
 
     @Test
     @Tag("remote")
+    @Tag("property")
     @DisplayName("Successful registration")
     void fillFormTest() {
 //        Fill registration form
