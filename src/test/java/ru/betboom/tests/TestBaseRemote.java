@@ -14,11 +14,16 @@ import java.util.Map;
 public class TestBaseRemote {
     @BeforeAll
     static void firstConfigure() {
-        Configuration.baseUrl = System.getProperty("product", "https://demoqa.com");
-        Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("browserVersion", "114.0");
-        Configuration.browserSize = System.getProperty("browserSize","1920x1080");
-        Configuration.remote = System.getProperty("remoteBrowserService", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
+        String baseUrl = System.getProperty("product", "https://demoqa.com");
+        Configuration.baseUrl = baseUrl;
+        String browser = System.getProperty("browser", "chrome");
+        Configuration.browser = browser;
+        String browserVersion = System.getProperty("browserVersion", "114.0");
+        Configuration.browserVersion = browserVersion;
+        String browserSize = System.getProperty("browserSize","1920x1080");
+        Configuration.browserSize = browserSize;
+        String remoteBrowserService = System.getProperty("remoteBrowserService", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
+        Configuration.remote = remoteBrowserService;
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(

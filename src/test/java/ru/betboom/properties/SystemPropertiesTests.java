@@ -41,7 +41,6 @@ public class SystemPropertiesTests {
     @Test
 //    @Tag("hello")
     void systemProperties5Tests() {
-
         String name = System.getProperty("name", "default_student"); // забрать значение (если нет, то дефолтный) - рекомендуется к использованию
         String message = format("Hello, %s!", name);
         System.out.println(message);
