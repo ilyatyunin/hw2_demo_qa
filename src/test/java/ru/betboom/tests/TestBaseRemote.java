@@ -18,13 +18,13 @@ public class TestBaseRemote {
         Configuration.baseUrl = baseUrl;
         String browser = System.getProperty("browser", "chrome");
         Configuration.browser = browser;
-        String browserVersion = System.getProperty("browserVersion", "114.0");
+        String browserVersion = System.getProperty("browserVersion", "110.0");
         Configuration.browserVersion = browserVersion;
         String browserSize = System.getProperty("browserSize","1920x1080");
         Configuration.browserSize = browserSize;
         String remoteBrowserService = System.getProperty("remoteBrowserService", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
         Configuration.remote = remoteBrowserService;
-
+// gradle property -DbaseUrl=https://demoqa.com -Dbrowser=chrome -DbrowserVersion=114.0 -DbrowserSize=1920x1080 -DremoteBrowserService=https://user1:1234@selenoid.autotests.cloud/wd/hub
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
                 "enableVNC", true,
