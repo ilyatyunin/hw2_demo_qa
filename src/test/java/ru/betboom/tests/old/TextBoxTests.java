@@ -1,4 +1,4 @@
-package ru.betboom.tests;
+package ru.betboom.tests.old;
 
 import org.junit.jupiter.api.Test;
 

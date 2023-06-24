@@ -82,7 +82,4 @@ public class RandomUtils {
         cityMap.put("Rajasthan", cityRajasthan);
         return faker.options().option(cityMap.get(state));
     }
-
-
-
 }

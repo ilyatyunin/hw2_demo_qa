@@ -1,28 +1,13 @@
-package ru.betboom.tests;
+package ru.betboom.tests.old;
 
 import org.junit.jupiter.api.Test;
 import ru.betboom.pages.RegistrationPage;
 
-public class RegistrationWithPageObjectsTests extends TestBase {
+import static ru.betboom.tests.TestData.*;
+
+public class RegistrationWithFakerAndPOTests extends TestBase {
 //    Components
     RegistrationPage registrationPage = new RegistrationPage();
-//    Input variables
-    String
-        firstName = "Ilya",
-        lastName = "Tyunin",
-        userEmail = "is_tyunin@gmail.com",
-        gender = "Male",
-        userNumber = "9876543210",
-        year = "1996",
-        month = "November",
-        dayOfMonth = "26",
-        subjects = "Maths",
-        hobbies = "Sports",
-        dir = "src/test/resources/",
-        file = "PalmTrees.jpg",
-        currentAddress = "Bali",
-        state = "Haryana",
-        city = "Karnal";
 
     @Test
     void fillFormTest() {
@@ -38,7 +23,7 @@ public class RegistrationWithPageObjectsTests extends TestBase {
                 .setBirthDate(dayOfMonth, month, year)
                 .setSubjects(subjects)
                 .chooseHobbies(hobbies)
-                .setPicture(dir + file)
+                .setPicture(file)
                 .setCurrentAddress(currentAddress)
                 .setState(state)
                 .setCity(city)
