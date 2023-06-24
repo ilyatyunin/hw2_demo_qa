@@ -18,12 +18,13 @@ public class RegistrationRemoteWithFakerAndPOTests extends TestBaseRemote {
     @Tag("property")
     @DisplayName("Successful registration")
     void fillFormTest() {
-//        Fill registration form
+//        Open registration form
         step("Open Form", () -> {
             registrationPage
                     .openPage()
                     .removeAds();
         });
+//        Fill registration form
         step("Fill Form", () -> {
             registrationPage
                     .setFirstName(firstName)
