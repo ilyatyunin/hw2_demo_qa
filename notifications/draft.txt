@@ -1,0 +1,14 @@
+6031896269:AAH1GEQ_tVQZK9QmfNS2EJrZndozabnvL30
+
+https://api.telegram.org/botXXX:YYYYY/getUpdates
+
+https://api.telegram.org/bot6031896269:AAH1GEQ_tVQZK9QmfNS2EJrZndozabnvL30/getUpdates
+
+-1001643698344 // chat id
+
+// google: "telegram send message api curl"
+
+curl -X POST \
+     -H 'Content-Type: application/json' \
+     -d '{"chat_id": "-1001643698344", "text": "This is a test from demoqa.com", "disable_notification": true}' \
+     https://api.telegram.org/bot6031896269:AAH1GEQ_tVQZK9QmfNS2EJrZndozabnvL30/sendMessage
