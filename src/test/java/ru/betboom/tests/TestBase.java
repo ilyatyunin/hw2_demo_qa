@@ -13,18 +13,15 @@ public class TestBase {
 
     @BeforeAll
     static void firstConfigure() {
-//        Configuration.baseUrl = ;
-//        Configuration.browserSize = "1920x1080";
-////        Configuration.holdBrowserOpen = true;
-        Configuration.browser = webDriverConfig.getBrowser();
-        Configuration.baseUrl = webDriverConfig.getBaseUrl();
-        Configuration.browserSize = webDriverConfig.getBrowserSize();
-        Configuration.browserVersion = webDriverConfig.getBrowserVersion();
-        Configuration.browserPosition = webDriverConfig.getBrowserPosition();
-        Configuration.pageLoadStrategy = webDriverConfig.getPageLoadStrategy();
+        Configuration.browser = TestBase.webDriverConfig.getBrowser();
+        Configuration.baseUrl = TestBase.webDriverConfig.getBaseUrl();
+        Configuration.browserSize = TestBase.webDriverConfig.getBrowserSize();
+        Configuration.browserVersion = TestBase.webDriverConfig.getBrowserVersion();
+        Configuration.browserPosition = TestBase.webDriverConfig.getBrowserPosition();
+        Configuration.pageLoadStrategy = TestBase.webDriverConfig.getPageLoadStrategy();
 
         if (webDriverConfig.getRemote()) {
-            Configuration.remote = webDriverConfig.getRemoteUrl();
+            Configuration.remote = TestBase.webDriverConfig.getRemoteUrl();
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("selenoid:options", Map.<String, Object>of(

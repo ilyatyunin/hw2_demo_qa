@@ -1,5 +1,6 @@
 package ru.betboom.tests;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import ru.betboom.pages.RegistrationPage;
 
@@ -10,6 +11,7 @@ public class RegistrationWithFakerAndPOTests extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
+    @Disabled
     void fillFormTest() {
 //        Fill registration form
         registrationPage

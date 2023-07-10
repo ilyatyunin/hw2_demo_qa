@@ -38,8 +38,12 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    systemProperties(System.getProperties())
 }
 
+//test {
+//    systemProperty 'env', System.getProperty('env', 'local')
+//}
 
 task remote_test(type: Test) {
     useJUnitPlatform{

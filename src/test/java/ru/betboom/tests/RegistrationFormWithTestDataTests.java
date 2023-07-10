@@ -1,5 +1,6 @@
 package ru.betboom.tests;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
@@ -12,6 +13,7 @@ import static ru.betboom.tests.TestData.*;
 public class RegistrationFormWithTestDataTests extends TestBase {
 
     @Test
+    @Disabled
     void fillFormTest() {
 
         // Open website

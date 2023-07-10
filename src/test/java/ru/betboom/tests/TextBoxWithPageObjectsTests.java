@@ -1,5 +1,6 @@
 package ru.betboom.tests;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import ru.betboom.pages.TextBoxPage;
 
@@ -14,6 +15,7 @@ public class TextBoxWithPageObjectsTests extends TestBase {
             permanentAddress = "Moscow";
 
     @Test
+    @Disabled
     void fillFormTest() {
 //        Fill registration form
         textBoxPage

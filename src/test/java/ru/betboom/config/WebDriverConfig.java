@@ -16,7 +16,7 @@ public interface WebDriverConfig extends Config {
     String getBrowser();
 
     @Key("browserSize")
-    @DefaultValue("1980x1080")
+    @DefaultValue("1920x1080")
     String getBrowserSize();
 
     @Key("browserVersion")

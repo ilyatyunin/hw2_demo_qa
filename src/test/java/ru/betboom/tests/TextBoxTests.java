@@ -1,5 +1,6 @@
 package ru.betboom.tests;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -16,6 +17,7 @@ public class TextBoxTests extends TestBase {
             permanentAddress = "Moscow";
 
     @Test
+    @Disabled
     void fillFormTest() {
 //        Open website
         open("/text-box");

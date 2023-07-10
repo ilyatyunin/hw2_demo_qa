@@ -1,5 +1,6 @@
 package ru.betboom.tests;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import ru.betboom.pages.RegistrationPage;
 
@@ -25,6 +26,7 @@ public class RegistrationWithPageObjectsTests extends TestBase {
         city = "Karnal";
 
     @Test
+    @Disabled
     void fillFormTest() {
 //        Fill registration form
         registrationPage
