@@ -5,7 +5,6 @@ import com.codeborne.selenide.ElementsCollection;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
-import static java.lang.String.format;
 
 public class CalendarComponent {
     public void setDate(String day, String month, String year) {
